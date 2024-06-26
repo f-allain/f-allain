@@ -193,12 +193,12 @@ alias cd="z"
 alias ls="eza --icons=always --color=always --git"
 alias czcmojif="cz --name cz_gitmoji commit"
 alias cz-release="SKIP=markdownlint cz bump --check-consistency --changelog"
-alias cz-release-dry="SKIP=markdownlint cz bump --check-consistency --changelog --dry-run" 
+alias cz-release-dry="SKIP=markdownlint cz bump --check-consistency --changelog --dry-run"
 # Docker aliases
 # --------------
 alias dng-docker-build="docker build -f Dockerfile.autocontainer --build-arg POETRY_VERSION=\$POETRY_VERSION --build-arg PIP_REPO_LOGIN=\"\$(pass Work/pypi-azure-user)\" --build-arg PIP_REPO_PWD=\"\$(pass Work/pypi-azure-pwd)\" -t \"\$(basename \$PWD)\" ."
 alias dng-docker-up="docker compose -f docker-compose.autocontainer.docker.yml build --build-arg POETRY_VERSION=\$POETRY_VERSION --build-arg PIP_REPO_LOGIN=\"\$(pass Work/pypi-azure-user)\" --build-arg PIP_REPO_PWD=\"\$(pass Work/pypi-azure-pwd)\" && docker compose -f docker-compose.autocontainer.docker.yml up"
-alias dng-docker-down="docker compose -f docker-compose.autocontainer.docker.yml down"     
+alias dng-docker-down="docker compose -f docker-compose.autocontainer.docker.yml down"
 # Samba mounts
 # ------------
 # alias mnt-data2="sudo mount -t drvfs '\\\\vm3decdv02-private.discngine.com\\data2' /mnt/share/data2/publicdata"
@@ -233,3 +233,4 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:*' fzf-preview '$HOME/.local/bin/fzf-preview.sh $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always --icons=always --git $realpath | head -200'
 zstyle ':fzf-tab:*' switch-group '<' '>'
+zstyle ':fzf-tab:*' fzf-bindings-default 'tab:down,btab:up,change:top,ctrl-space:toggle,bspace:backward-delete-char,ctrl-h:backward-delete-char'
