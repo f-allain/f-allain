@@ -217,7 +217,7 @@ alias umnt-vm3decdv="sudo fusermmount -u /mnt/share/{data,privatedata,publicdata
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # LOAD SMARTCD
-[ -r "$HOME/.smartcd_config" ] && ( [ -n $BASH_VERSION ] || [ -n $ZSH_VERSION ] ) && source ~/.smartcd_config
+[ -r "$HOME/.smartcd_config" ] && ( [ -n $BASH_VERSION ] || [ -n $ZSH_VERSION ] ) && source ~/.smartcd_config > /dev/null
 # LOAD CUSTOM ENV VARS
 #[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 # LOAD NVM
